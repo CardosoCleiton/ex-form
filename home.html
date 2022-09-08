@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/@babel/standalone@7/babel.min.js"></script> -->
+
+  <title>Desafio Form</title>
+
+</head>
+
+<body>
+
+
+  <div id='app'>
+
+    <header>
+      <div class='container-header'>
+        <div>Logo</div>
+        <nav>
+          <ul>
+            <li><a href="#">Todos os produtos</a></li>
+            <li><a href="#">Coleções</a></li>
+            <li><a href="#">Outlet</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+
+    <div class="div-container-corpo">
+
+      <form action="#">
+        <div class="titulo-h1">
+          <h1>Faça parte do nosso time</h1>
+        </div>
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Your name..">
+
+        <label for="email">Emai</label>
+        <input type="email" id="email" name="email" placeholder="Your email..">
+
+        <label for="telefone">Telefone</label>
+        <input type="number" id="telefone" name="telefone" placeholder="(11)00000-0000">
+
+        <!-- <label for="departamento">Departamentos</label>
+        <div class="select">
+          <select id="departamento" name="departamento">
+            <option value="Contabilidade">Contabilidade</option>
+            <option value="Juridico">Juridico</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Tecnologia">Tecnologia</option>
+          </select>
+        </div> -->
+
+        <div class="container">
+          <label for="departamento">Departamentos</label>
+          <input type='text' name="categoria" placeholder="Selecione um Departamento" onfocus="dropdown(0)" onblur="dropdown(1)" />
+
+          <div class="dropDown">
+            <div class="listDropDown">
+              <div class="item" id="item-1" onmousedown="category(1)"> Juridico</div>
+              <div class="item" id="item-2" onmousedown="category(2)"> Financeiro</div>
+              <div class="item" id="item-3" onmousedown="category(3)"> Rh</div>
+              <div class="item" id="item-4" onmousedown="category(4)"> Ouvidoria</div>
+              <div class="item" id="item-5" onmousedown="category(5)"> Atendimento</div>
+              <div class="item" id="item-6" onmousedown="category(6)"> Atendimento1</div>
+              <div class="item" id="item-7" onmousedown="category(7)"> Atendimento2</div>
+              <div class="item" id="item-8" onmousedown="category(8)"> Atendimento3</div>
+            </div>
+          </div>
+        </div>
+
+        <p>Disponibilidade</p>
+        <div class="disponibilidade">
+          <label class="container-disponibilidade">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            Integral(8h)
+          </label>
+
+          <label class="container-disponibilidade">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Meio Periodo(4h)
+          </label>
+
+          <label class="container-disponibilidade">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Freelancer
+          </label>
+        </div>
+
+
+        <p>Qual a melhor forma de entrarmos em contato com você?</p>
+        <div class="disponibilidade">
+          <label class="container-contato">
+            <input type="checkbox" checked="checked">
+            <span class="checkmark2"></span>
+            Email
+          </label>
+
+          <label class="container-contato">
+            <input type="checkbox">
+            <span class="checkmark2"></span>
+            Ligação
+          </label>
+
+          <label class="container-contato">
+            <input type="checkbox">
+            <span class="checkmark2"></span>
+            WhatsApp
+          </label>
+        </div>
+
+
+
+        <label for="subject">Mensagem</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+
+        <div class="curriculo">
+          <label class="txt-curriculo">Curriculo</label>
+          <label class="txt-upload" for="arquivo">upload</label>
+          <input type="file" name="arquivo" id="arquivo">
+        </div>
+
+        <input type="submit" value="Enviar">
+      </form>
+
+      <div class="txt-lorem">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam fugiat, dolorem sit numquam esse eligendi in debitis odio iusto, doloribus dolore, commodi consequuntur quos nulla impedit repellat aliquam illum aut!
+          Aut, perspiciatis voluptates? Ad nobis accusantium praesentium. Voluptatem quisquam repellat natus? Reiciendis quibusdam eius ipsa labore minima corporis eaque saepe, enim nemo quo numquam totam? Totam obcaecati rerum repellat corporis?
+          Ducimus debitis perferendis, at nobis ea laborum impedit similique libero. Ea, voluptatibus similique provident nesciunt nostrum beatae dolores exercitationem accusamus, nulla cupiditate culpa recusandae esse necessitatibus magni eum ex? Veritatis!
+        </p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur et vitae quod, tempora architecto deserunt officia illum quasi maxime fugiat, libero incidunt, eligendi natus necessitatibus placeat deleniti provident nemo iste.
+          Facere dolores qui molestias autem rerum facilis. At tenetur nemo veniam eos officiis eveniet perspiciatis totam dolore sunt, atque itaque ducimus neque soluta sed obcaecati facilis cumque qui quasi. Facere!
+          Laudantium, repellendus. Nisi adipisci inventore dicta officia pariatur sed expedita voluptatem tempora exercitationem sint, non cum itaque consequatur provident! Esse, quasi maiores? Corrupti deleniti et, est omnis tempore numquam in.
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus illo quas delectus, facere hic. Optio ullam ipsam, nobis suscipit, maxime non, tenetur exercitationem sit ex fuga voluptatibus alias distinctio.
+          Consectetur perferendis dolorem sequi nulla, voluptatibus incidunt libero reiciendis vel deleniti. Quia esse soluta distinctio aperiam itaque unde, in ea ab atque similique aut numquam veniam, molestias consequatur magnam aspernatur.
+          Animi, et autem dolores placeat sit beatae pariatur? Porro natus delectus pariatur excepturi quidem, quam perspiciatis sint doloribus saepe temporibus cum unde facere at voluptates non vero fuga ipsum voluptas?
+        </p>
+
+      </div>
+
+
+    </div>
+
+    <footer>
+      <div class='container-footer'>
+        <div class='txt-footer'>
+          <div>Logo</div>
+          <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+
+        <div class='txt-footer'>
+          <div> <strong> categoria</strong></div>
+          <div>
+            <p>sandálias</p>
+            <p>botas</p>
+            <p>tênis</p>
+            <p>oxford</p>
+            <p>coturnos</p>
+          </div>
+        </div>
+
+        <div class='txt-footer'>
+          <div> <strong> institucional </strong> </div>
+          <div>
+            <p>sobre nós</p>
+            <p>perguntas frequentes</p>
+            <p>politica de privacidade</p>
+            <p>rastreamento de pedidos</p>
+            <p>fale conosco</p>
+          </div>
+        </div>
+
+
+      </div>
+    </footer>
+
+
+  </div>
+
+  <script>
+
+    function category(c) {
+      // alert('Evento Criado' + c)
+      const item = document.getElementById('item-' + c).innerHTML;
+      document.getElementsByTagName('input')[3].value = item;
+
+    }
+
+    function dropdown(p) {
+      const e = document.getElementsByClassName('dropDown')[0];
+      const d = ['block', 'none'];
+      e.style.display = d[p];
+
+      const t = [`0px`, `0px,-10px`];
+      const h = [`100px`, `0px`];
+      // const o = [1, 0];
+      setTimeout(function () {
+        e.style.transform = `translate(` + t[p] + `)`;
+        e.style.height = h[p];
+        // e.style.opacity = o[p];
+        // console.log(o[p])
+      }, 0);
+
+    }
+
+    // function desfoque() {
+    //   document.getElementsByClassName('dropDown')[0].style.display = 'none';
+    // }
+
+  </script>
+
+</body>
+
+
+
+
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    width: 100vw;
+    height: 80px;
+    z-index: 10;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* position: absolute; */
+    bottom: 0;
+    background: #B32E5B;
+    width: 100vw;
+    padding-top: 2rem;
+    /* padding-bottom: 2rem; */
+    height: auto;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: auto;
+    gap: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 60%;
+    height: auto;
+    /* background: yellowgreen; */
+    margin-top: 0rem;
+    margin-right: 1rem;
+    color: #C4C4C4;
+
+  }
+
+  label {
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  p {
+    margin-top: 1rem;
+
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+    color: #C4C4C4;
+    outline: #B32E5B;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    background: #B32E5B;
+    border: none;
+    color: white;
+    outline: #B32E5B;
+    box-sizing: border-box;
+  }
+
+
+  input {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    padding-left: 0.5rem;
+    color: #C4C4C4;
+    outline: #B32E5B;
+    box-sizing: border-box;
+  }
+
+  nav a {
+    text-transform: uppercase;
+    color: #242424;
+  }
+
+  /*********************************************************************************/
+  .container {
+    position: relative;
+    margin-top: 1rem;
+    width: 100%;
+    border: none;
+  }
+
+
+
+  .container input {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    padding-left: 0.5rem;
+    color: #C4C4C4;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-top: 0.5rem;
+  }
+
+  .dropDown {
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    background: white;
+    border: 0.5px solid #B32E5B;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-top: 0.5rem;
+    overflow: auto;
+    display: none;
+    cursor: pointer;
+    transform: translate(0px, -10px);
+    transition: 0.3s ease-in-out;
+    /* opacity: 0; */
+    z-index: 1;
+  }
+
+
+
+
+
+  /*barra de rolagem*/
+  ::-webkit-scrollbar-thumb {
+    background-color: #B32E5B;
+    border-radius: 2px;
+
+  }
+
+  /*background da barra de rolagem*/
+  ::-webkit-scrollbar {
+    background-color: #C4C4C4;
+    width: 3px;
+    /* border: 0.5px solid #B32E5B; */
+    /* border-radius: 2px; */
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 2rem;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .item:hover {
+    background: #e9e9e9;
+    color: #C4C4C4;
+    padding-left: 0.7rem;
+    transition: 0.3s;
+  }
+
+  /*********************************************************************************/
+
+
+  select {
+    width: 100%;
+    height: 2rem;
+    color: #C4C4C4;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    padding-left: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    background-image: none;
+    outline: #B32E5B;
+
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  .select {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+
+
+  textarea {
+    width: 100%;
+    height: 2rem;
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    resize: none;
+    color: #C4C4C4;
+    outline: #B32E5B;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #C4C4C4;
+  }
+
+  input::-moz-placeholder {
+    color: #C4C4C4;
+  }
+
+
+  ::-webkit-input-placeholder {
+    color: #C4C4C4;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .titulo-h1 {
+    color: #242424;
+    margin-top: 1rem;
+  }
+
+  option {
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background: white;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background: tomato; */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 70%;
+    height: 100px;
+  }
+
+  .container-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    /* background: tomato; */
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    width: 70%;
+    height: auto;
+    /* position: absolute; */
+    bottom: 0;
+    /* padding-top: 2rem;
+    margin-top: 2rem; */
+  }
+
+  .txt-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 20%;
+    color: white;
+  }
+
+  .txt-footer p {
+    margin: 0;
+    padding: 0.2rem;
+    color: white;
+  }
+
+  .div-container-corpo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    height: auto;
+    font-size: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .txt-lorem {
+    width: 40%;
+    margin-left: 1rem;
+    padding-top: 47px;
+  }
+
+  .disponibilidade {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .container-disponibilidade {
+    display: block;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 0.5rem;
+    padding: 0.2rem;
+
+    font-size: 12px;
+    width: 130px;
+    /* background: #B32E5B; */
+
+  }
+
+  .container-disponibilidade input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-right: 1.2rem;
+  }
+
+  .container-disponibilidade:hover input~.checkmark {
+    background: #C4C4C4;
+  }
+
+  .container-disponibilidade input:checked~.checkmark {
+    background: #B32E5B;
+  }
+
+  .container-disponibilidade .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .container-disponibilidade input:checked~.checkmark:after {
+    display: block;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #C4C4C4;
+    /* background: #C4C4C4; */
+    border-radius: 2px;
+  }
+
+  /*///////////////////////////////////////////////////////////////////////////////////////*/
+
+
+  .container-contato {
+    display: block;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 0.5rem;
+    padding: 0.2rem;
+
+    font-size: 12px;
+    width: 130px;
+    /* background: #B32E5B; */
+
+  }
+
+  .container-contato input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin-right: 1.2rem;
+  }
+
+  .container-contato:hover input~.checkmark2 {
+    background: #C4C4C4;
+  }
+
+  .container-contato input:checked~.checkmark2 {
+    /* background: #B32E5B; */
+    border: 0.5px solid #B32E5B;
+  }
+
+  .container-contato .checkmark2:after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 3.5px;
+    top: 3.5px;
+    width: 10px;
+    height: 10px;
+    background: #B32E5B;
+    border-radius: 10px;
+    /* border: solid white; */
+    /* border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); */
+  }
+
+  .container-contato input:checked~.checkmark2:after {
+    display: block;
+  }
+
+  .checkmark2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #C4C4C4;
+    /* background: #C4C4C4; */
+    border-radius: 10px;
+  }
+
+
+  .curriculo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .curriculo .txt-upload {
+
+    padding: 5px 5px;
+    width: 120px;
+    background-color: #C4C4C4;
+    color: #FFF;
+    /* text-transform: uppercase; */
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .txt-curriculo {
+    color: #C4C4C4;
+
+  }
+
+  #arquivo {
+    margin: 0 !important;
+    padding: 0 !important;
+
+  }
+</style>
+
+
+
+</html>
